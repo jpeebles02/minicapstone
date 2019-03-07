@@ -1,7 +1,7 @@
 require "http"
 require "tty-table"
 
-response = HTTP.get("http://localhost:3000/api/all_products_url")
+response = HTTP.get("http://localhost:3000/api/products")
 puts "response is"
 pp response
 
