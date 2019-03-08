@@ -1,6 +1,7 @@
   json.product_id_is product.id
   json.product_name_is product.name
-  json.the_price_is number_to_currency(product.price)
+  json.price number_to_currency(product.price)
+  json.price product.price
   json.description_about_the_product product.description
   json.the_rating_is product.rating
   json.the_image_url_is product.image_url

@@ -35,12 +35,12 @@ class Product < ApplicationRecord
   end
 
   def product_stock_avalibility
-    number_of_products > 0
-    # if number_of_products >= 1
-    #   return true
-    # else
-    #   return false
-    # end
+    # if number_of_products > 0
+    if number_of_products >= 1
+      return true
+    else
+      return false
+    end
   end
 
 end
