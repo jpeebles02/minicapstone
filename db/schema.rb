@@ -10,21 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_08_023938) do
+ActiveRecord::Schema.define(version: 2019_03_14_232858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "category_products", force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "url"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "product_id"
+    t.integer "quantity"
+    t.decimal "subtotal", precision: 9, scale: 2
+    t.decimal "tax", precision: 9, scale: 2
+    t.decimal "total", precision: 9, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.decimal "price", precision: 5, scale: 2
-    t.string "image_url"
     t.text "description"
-    t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "number_of_products"
     t.integer "supplier_id"
+    t.integer "rating"
   end
 
   create_table "suppliers", force: :cascade do |t|
@@ -33,6 +63,15 @@ ActiveRecord::Schema.define(version: 2019_03_08_023938) do
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
   end
 
 end
