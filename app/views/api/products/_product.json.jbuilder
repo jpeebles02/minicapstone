@@ -20,3 +20,5 @@ json.images product.images
 
 json.categories product.categories
 
+
+

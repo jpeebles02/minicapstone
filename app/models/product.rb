@@ -13,7 +13,9 @@ class Product < ApplicationRecord
   # validates :image_url, presence: true
   validates :number_of_products, presence: true
 
-  has_many :orders
+  # has_many :orders
+
+  has_many :carted_products
 
   has_many :category_products
   
