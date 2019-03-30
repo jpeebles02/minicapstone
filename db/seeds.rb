@@ -11,7 +11,7 @@ Supplier.create!({name: "nike", email: "nike@gmail.com", phone_number: "31266677
 Supplier.create!({name: "addidas", email: "addidas@gmail.com", phone_number: "3124445555"})
 
 #THIS STUFF IS FOR THE PRODUCT MODEL
-Product.create!({name: "Basketball Ball", price: 10, description: "orange ball with black lining", rating: 5, number_of_products: 5, supplier_id: 2})
+Product.create!({name: "Basketball", price: 10, description: "orange ball with black lining", rating: 5, number_of_products: 5, supplier_id: 2})
 Product.create!({name: "Football Ball", price: 8, description: "brown ball with white stitches", rating: 5, number_of_products: 5, supplier_id: 1})
 Product.create!({name: "Soccer Ball", price: 10, description: "black and white spotted ball", rating: 5, number_of_products: 5, supplier_id: 1})
 Product.create!({name: "Tennis Ball", price: 5, description: "green ball", rating: 5, number_of_products: 5, supplier_id: 2})
