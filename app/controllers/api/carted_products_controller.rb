@@ -2,7 +2,7 @@ class Api::CartedProductsController < ApplicationController
   before_action :authenticate_user
   
   def create
-    product = Product.find_by(id: params[:product_id])
+    # product = Product.find_by(id: params[:product_id])
 
     @carted_product = CartedProduct.new(
       product_id: params[:product_id],
@@ -20,8 +20,9 @@ class Api::CartedProductsController < ApplicationController
   end
 
   def index
+    # @carted_products = CartedProduct.all
     # @orders = Order.where(user_id: current_user.id) or 
-    @carted_products = current_user.carted_products
+    @carted_products = current_user.carted_products.where(status: "carted")
     render "index.json.jbuilder"
   end
 

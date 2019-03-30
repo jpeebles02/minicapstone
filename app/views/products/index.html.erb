@@ -1,0 +1,11 @@
+<div style="background-color:black">
+  <img src ="http://www.cndajin.com/data/wls/184/16864835.gif">
+<% @products.each do |product| %>
+<div style="background-color:darkgrey">
+  <H1><%= product.name %></H1><br>
+<div style="background-color:lightgrey">
+  <p4>Price: <%= product.price %></p4><br>
+  <p5>Description: <%= product.description %></p5><br>
+  <p6>Rating: <%= product.rating %></p6><br>
+  <a href="/products/<%= product.id %>">More Info</a>
+<% end %>

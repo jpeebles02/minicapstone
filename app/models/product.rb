@@ -10,15 +10,11 @@ class Product < ApplicationRecord
   validates :rating, numericality: true
   validates :description, presence: true
   validates :description, length:{in: 2..500}
-  # validates :image_url, presence: true
-  validates :number_of_products, presence: true
-
-  # has_many :orders
 
   has_many :carted_products
+  has_many :orders, through: :carted_products
 
   has_many :category_products
-  
   has_many :categories, through: :category_products
 
   has_many :images

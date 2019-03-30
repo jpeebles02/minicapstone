@@ -1,0 +1,15 @@
+<div style="background-color:darkgrey">
+<h1><%= @product.name %></h1><br>
+<div style="background-color:lightgrey">
+<p4>Price: <%= @product.price %></p4><br>
+<p5>Description: <%= @product.description %></p5><br>
+<p6>Rating: <%= @product.rating %></p6><br>
+<a href="/products">Back to all products</a><br>
+<a href="/products/<%= @product.id %>/edit">Go to edit page</a><br>
+<a href="/products/<%= @product.id %>" data-method="delete" rel="nofollow">Delete product</a><br>
+<% @product.images.each do |image|%>
+    <img src="<%=image.url%>">
+<% end %>
+
+
+

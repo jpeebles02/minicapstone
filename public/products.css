@@ -1,0 +1,9 @@
+body {
+  font-family: Didot,"Didot LT STD","Hoefler Text",Garamond,"Times New Roman",serif;
+  background-image: url('Sports.png');
+}
+
+.title {
+  font-family: 'Indie Flower', cursive;
+  font-size: 3em;
+}
