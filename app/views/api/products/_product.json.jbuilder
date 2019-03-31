@@ -8,7 +8,7 @@ json.the_rating_is product.rating
 json.is_the_product_discounted? product.is_discounted?
 json.the_tax_is number_to_currency(product.tax)
 json.the_total_price_is number_to_currency(product.total)
-json.is_product_in_stock product.product_stock_avalibility
+# json.is_product_in_stock product.product_stock_avalibility
 json.number_of_products product.number_of_products
 
 json.supplier do 

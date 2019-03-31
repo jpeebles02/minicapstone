@@ -47,13 +47,13 @@ class Product < ApplicationRecord
     return total / 2
   end
 
-  def product_stock_avalibility
-    # if number_of_products > 0
-    if number_of_products >= 1
-      return true
-    else
-      return false
-    end
-  end
+  # def product_stock_avalibility
+  #   # if number_of_products > 0
+  #   if number_of_products >= 1
+  #     return true
+  #   else
+  #     return false
+  #   end
+  # end
 
 end
