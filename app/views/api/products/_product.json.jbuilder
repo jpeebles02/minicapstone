@@ -19,6 +19,8 @@ end
 json.images product.images
 
 json.categories product.categories
+json.images product.images
+json.primary_image product.primary_image
 
 
 

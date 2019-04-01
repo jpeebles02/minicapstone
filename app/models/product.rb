@@ -48,12 +48,18 @@ class Product < ApplicationRecord
   end
 
   # def product_stock_avalibility
-  #   # if number_of_products > 0
+  #   if number_of_products > 0
   #   if number_of_products >= 1
   #     return true
   #   else
   #     return false
   #   end
   # end
-
+  def primary_image
+    if images.length > 0
+      images[0].url
+    else
+      "https://www.freeiconspng.com/uploads/no-image-icon-21.png"
+    end
+  end
 end
