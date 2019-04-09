@@ -1,15 +1,15 @@
 class Product < ApplicationRecord
-  validates :name, presence: true
-  validates :name, uniqueness: true
-  validates :name, length:{in: 1..50}
-  validates :price, presence: true
-  validates :price, numericality: true
-  validates :price, numericality: {greater_than: 0}
-  validates :rating, presence: true
-  validates :rating, numericality: {greater_than: 0}
-  validates :rating, numericality: true
-  validates :description, presence: true
-  validates :description, length:{in: 2..500}
+  # validates :name, presence: true
+  # validates :name, uniqueness: true
+  # validates :name, length:{in: 1..50}
+  # validates :price, presence: true
+  # validates :price, numericality: true
+  # validates :price, numericality: {greater_than: 0}
+  # validates :rating, presence: true
+  # validates :rating, numericality: {greater_than: 0}
+  # validates :rating, numericality: true
+  # validates :description, presence: true
+  # validates :description, length:{in: 2..500}
 
   has_many :carted_products
   has_many :orders, through: :carted_products

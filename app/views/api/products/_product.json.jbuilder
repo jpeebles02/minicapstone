@@ -11,10 +11,11 @@ json.the_total_price_is number_to_currency(product.total)
 # json.is_product_in_stock product.product_stock_avalibility
 json.number_of_products product.number_of_products
 
-json.supplier do 
-  json.id product.supplier.id
-  json.name product.supplier.name
-end
+json.supplier product.supplier
+# json.supplier do 
+#   json.id product.supplier_id
+#   json.name product.supplier
+# end
 
 json.images product.images
 

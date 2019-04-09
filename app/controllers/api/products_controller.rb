@@ -42,6 +42,7 @@ class Api::ProductsController < ApplicationController
       # image_url: params[:image_url],
       number_of_products: params[:number_of_products],
       # user_id: current_user.id
+      supplier_id: 1
     )
     if @product.save
       render "show.json.jbuilder" 
