@@ -27,13 +27,11 @@ class Api::CartedProductsController < ApplicationController
   end
 
   def destroy
-      remove_products = current_user.carted_products.where(status: "carted",
-        id: params[:id]
-        )
-      remove_products.update_all(
-        status: "removed"
-        )
-      # remove_products.destroy
+    remove_products = current_user.carted_products.where(status: "carted",
+    id: params[:id])
+    remove_products.update_all(
+    status: "removed")
+   # remove_products.destroy
     render json: {message: "Product Successfully Removed"}
   end
 end

@@ -8,8 +8,8 @@ class Api::OrdersController < ApplicationController
   end
 
   def show
-      @order = Order.find_by(id: params[:id])
-      render "show.json.jbuilder"
+    @order = Order.find_by(id: params[:id])
+    render "show.json.jbuilder"
   end
 
   def create 
@@ -31,3 +31,6 @@ class Api::OrdersController < ApplicationController
     render json: {message: "Order has been removed."}
   end
 end
+
+
+Education.create!(start_date: "", end_date: "", degree: "Masters in Computer Science", university_name: "Northwestern University", details: "I finished a 3 year masters program in 1 year. Graduated top of my class.")

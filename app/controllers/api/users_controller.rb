@@ -18,3 +18,5 @@ class Api::UsersController < ApplicationController
     render "user.json.jbuilder"
   end
 end
+
+
